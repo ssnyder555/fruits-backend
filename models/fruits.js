@@ -1,21 +1,10 @@
 // this will be our data
+const mongoose = require('mongoose');
 
-const fruits = [
-  {
-    name: 'apple',
-    color: 'red',
-    readyToEat: true
-  },
-  {
-    name: 'pear',
-    color: 'green',
-    readyToEat: false
-  },
-  {
-    name: 'banna',
-    color: 'yellow',
-    readyToEat: true
-  }
-];
+const fruitsSchema = new mongoose.Schema({
+  name: {type: String, required: true},
+  color: {type: String, required: true},
+  readyToEat: Boolean
+})
 
-module.exports = fruits;
+module.exports = mongoose.model('Fruits', fruitsSchema);
