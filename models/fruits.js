@@ -1,3 +1,5 @@
+// this will be our data
+
 const fruits = [
   {
     name: 'apple',
@@ -16,4 +18,4 @@ const fruits = [
   }
 ];
 
-module.exports = fruits; 
+module.exports = fruits;

@@ -2,18 +2,22 @@ const express          = require('express');
 const app              = express();
 const bodyParser       = require('body-parser');
 const methodOverride   = require('method-override');
+// require our database
+require('./db/db');
 // require our controller
-const fruitsController = require('/controllers/fruits');
+// const fruitsController = require('/controllers/fruits');
+
+
 
 // setting up the middle ware
 // middleware our function that happens sycronously
-// in the request from the client 
-app.use(bodyParser.urlencoded([extend: false]));
+// in the request from the client
+// app.use(bodyParser.urlencoded([extend: false]));
 app.use(methodOverride('_method'));
 
 
 
-app.use('fruits', fruitsController)
+// app.use('fruits', fruitsController)
 
 app.get('/', (req, res) =>{
   res.send('this is the index page')
