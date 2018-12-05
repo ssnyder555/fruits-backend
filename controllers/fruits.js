@@ -74,7 +74,7 @@ router.get('/:id/edit', (req, res) => {
 router.get('/:id', (req, res) => {
   console.log(req.params);
   Fruits.findById(req.params.id, (err, foundFruit) => {
-    console.log(foundFruit, ' foundFruit')
+    
       res.render('show.ejs', {
         fruit: foundFruit
       });
